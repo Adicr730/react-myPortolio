@@ -3,12 +3,15 @@ import dp from "../img/Sikkim_dp.jpg";
 import kick from "../img/futbol-solid.svg";
 import click from "../img/camera-solid.svg";
 import code from "../img/code-solid.svg";
+import bg from "../img/bg.jpg";
 import Wave from "./Wave";
 //Styled
 import {About, Description,Image,Hide} from "../styles"
 //Framer Motion
 import {motion} from "framer-motion";
 import {titleAnim , fade ,photoAnim} from "../animation";
+
+import {Link} from "react-router-dom";
 
 const AboutSection = () => {
 	return(
@@ -31,7 +34,7 @@ const AboutSection = () => {
 					<motion.p variants={fade}>
 						{"<h3> " + "Aspiring FilmMaker / Photographer who can Kick some Balls and Code. ( Yes i made this website myself ) "+ "</h3>"}
 					</motion.p>
-					<motion.button variants={fade}>Contact Me</motion.button>
+					<motion.button variants={fade}><Link to="/contact">Contact Me</Link></motion.button>
 				</div>
 			</Description>
 			<Image>
@@ -43,6 +46,5 @@ const AboutSection = () => {
 };
 
 //Styled component
-
 
 export default AboutSection;

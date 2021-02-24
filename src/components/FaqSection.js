@@ -5,12 +5,17 @@ import {About} from "../styles";
 
 import Toggle from "./Toggle";
 
+import {motion} from "framer-motion";
 import {AnimateSharedLayout} from "framer-motion";
+import {useScroll} from "./useScroll";
+import {fade,workpageAnimation2,pageAnimation,workpageAnimation,photoAnim,lineAnim} from "../animation";
 
 const FaqSection = () =>{
+	const [element,controls] = useScroll();
 	return(
 		<Faq>
-			<h2>Any Questions? <span>FAQ</span></h2>
+			<motion.h2>Any Questions? <span>FAQ</span></motion.h2>
+			<motion.div variants={pageAnimation} animate={controls} initial="hidden" ref={element}>
 			<AnimateSharedLayout>
 			<Toggle title="How do I Start ?">
 
@@ -45,6 +50,7 @@ const FaqSection = () =>{
 
 			</Toggle>
 			</AnimateSharedLayout>
+			</motion.div>
 		</Faq>
 		);
 };
@@ -55,17 +61,17 @@ const Faq = styled(About)`
 		display:block;
 	}
 	h2{
-		padding-botttom:1rem;
+		padding-botttom:2rem;
 		font-weight:lighter;
 	}
 	.faq-line {
 		background : #cccccc;
 		height:0.2rem;
-		margin:2rem 0rem;
+		margin:1.2rem 0rem;
 		width:100%;
 	}
 	.question{
-		padding:2rem 0rem;
+		padding:1.5rem 0rem;
 		cursor:pointer;
 	}
 	.ans{

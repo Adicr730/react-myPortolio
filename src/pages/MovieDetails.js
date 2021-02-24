@@ -7,6 +7,8 @@ import {MovieState} from "../movieState";
 import {motion} from "framer-motion";
 import {workpageAnimation} from "../animation";
 
+import ScrollTop from "../components/ScrollTop";
+
 const MovieDetail= () =>{
 	const history = useHistory();
 	const url = history.location.pathname;
@@ -32,6 +34,7 @@ const MovieDetail= () =>{
 			<ImageDisplay>
 				<img src={movie.secondaryImg} alt="movie2"/>
 			</ImageDisplay>
+			<ScrollTop/>
 		</Details>
 		)}
 		</>
@@ -61,6 +64,15 @@ const HeadLine = styled.div`
 		height:200vh;
 		object-fit:cover;
 		object-position:100% 15%;
+	}
+	@media(max-width:1300px){
+		padding:2rem 2rem;
+		img{
+		width:100%;
+		height:200vh;
+		object-fit:cover;
+		object-position:50% 15%;
+	}
 	}
 `;
 

@@ -78,11 +78,14 @@ export const titleAnim = {
 };
 
 export const fade = {
-	hidden:{opacity:0},
+	hidden:{opacity:0,transition:{
+			duration:1,
+			ease:"easeOut",
+		},},
 	show:{
 		opacity:1,
 		transition:{
-			duration:.75,
+			duration:1,
 			ease:"easeOut",
 		},
 	},

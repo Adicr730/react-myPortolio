@@ -1,4 +1,7 @@
 import React from "react";
+import {useScroll} from "./useScroll";
+import {fade,workpageAnimation2,pageAnimation,workpageAnimation,photoAnim,lineAnim} from "../animation";
+import {motion} from "framer-motion";
 // import icons
 import professional from "../img/photo-video-solid.svg";
 import money from "../img/money-bill-wave-solid.svg";
@@ -10,11 +13,12 @@ import {About, Description,Image,Hide} from "../styles"
 import styled from "styled-components";
 
 const ServicesSection= () =>{
+	const [element,controls] = useScroll();
 	return(
 		<Services>
 			<Descrip>
-				<h2>High <span>quality</span> services</h2>\
-				<Cards>
+				<h2>High <span>quality</span> services</h2>
+				<Cards variants={fade} animate={controls} initial="hidden" ref={element}>
 					<Card>
 						<div className="icon">
 							<img src={professional} alt="icon"/>
@@ -45,7 +49,7 @@ const ServicesSection= () =>{
 					</Card>
 				</Cards>
 			</Descrip>
-			<Image>
+			<Image variants={fade} animate={controls} initial="hidden" ref={element}>
 				<img src={home2} alt="hero photo"/>
 			</Image>
 		</Services>
@@ -53,6 +57,7 @@ const ServicesSection= () =>{
 };
 
 const Services = styled(About)`
+	z-index:2;
 	h2{
 		padding-bottom:5rem;
 	}
@@ -68,7 +73,7 @@ h2{
 }
 `
 
-const Cards = styled.div`
+const Cards = styled(motion.div)`
 	display :flex;
 	flex-wrap:wrap;
 `;

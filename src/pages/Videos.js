@@ -27,18 +27,19 @@ import varanasimain from "../img/video/varanasimain.jpeg";
 //Animations
 import {motion} from "framer-motion";
 import {workpageAnimation , fade , photoAnim, lineAnim ,frames, frameContainer} from "../animation";
+import {useScroll} from "../components/useScroll";
+
+import ScrollTop from "../components/ScrollTop";
 
 const Videos = () =>{
+	const [element,controls] = useScroll();
+	const [element1,controls1] = useScroll();
+	const [element2,controls2] = useScroll();
+	const [element3,controls3] = useScroll();
+	const [element4,controls4] = useScroll();
 	return(
 		<Work variants={workpageAnimation} initial="hidden" animate="show" exit="exit">
-		<motion.div variants={frameContainer}>
-		<Frame1 variants={frames}></Frame1>
-		<Frame2 variants={frames}></Frame2>
-		<Frame3 variants={frames}></Frame3>
-		<Frame4 variants={frames}></Frame4>
-		<Frame5 variants={frames}></Frame5>
-		</motion.div>
-			<Thumbnail>
+			<Thumbnail variants={fade} animate={controls} initial="hidden" ref={element}>
 				<motion.h2 variants={fade}>Goa2021</motion.h2>
 				<motion.div variants={lineAnim} className="line"></motion.div>
 				<Link to="/videos/goa-video">
@@ -47,7 +48,7 @@ const Videos = () =>{
 					</Hide>
 				</Link>
 			</Thumbnail>
-			<Thumbnail>
+			<Thumbnail variants={fade} animate={controls1} initial="hidden" ref={element1}>
 				<motion.h2 variants={fade}>Welcome to Varanasi</motion.h2>
 				<motion.div variants={lineAnim}  className="line"></motion.div> 
 				<Link to="/videos/welcome-to-varanasi">
@@ -56,7 +57,7 @@ const Videos = () =>{
 				</Hide>
 				</Link>
 			</Thumbnail>
-			<Thumbnail>
+			<Thumbnail variants={fade} animate={controls2} initial="hidden" ref={element2}>
 				<motion.h2 variants={fade}>Sikkim - A Short Glimpse</motion.h2>
 				<motion.div variants={lineAnim}  className="line"></motion.div>
 				<Link to="/videos/sikkim-video">
@@ -65,7 +66,7 @@ const Videos = () =>{
 				</Hide>
 				</Link>
 			</Thumbnail>
-			<Thumbnail>
+			<Thumbnail variants={fade} animate={controls3} initial="hidden" ref={element3}>
 				<motion.h2 variants={fade}>Kashiyatra'19 After Movie</motion.h2>
 				<motion.div variants={lineAnim}  className="line"></motion.div>
 				<Link to="/videos/KYaftermovie">
@@ -74,7 +75,7 @@ const Videos = () =>{
 				</Hide>
 				</Link>
 			</Thumbnail>
-			<Thumbnail>
+			<Thumbnail variants={fade} animate={controls4} initial="hidden" ref={element4}>
 				<motion.h2 variants={fade}>Unrest - A Short Film</motion.h2>
 				<motion.div variants={lineAnim}  className="line"></motion.div>
 				<Link to="/videos/unrest">
@@ -83,6 +84,7 @@ const Videos = () =>{
 				</Hide>
 				</Link>
 			</Thumbnail>
+			<ScrollTop/>
 		</Work>
 		);
 };
@@ -95,9 +97,12 @@ const Work = styled(motion.div)`
 		padding:.25rem 0rem;	
 		font-size:3rem;
 	}
+	@media(max-width:1300px){
+		padding:2rem 2rem;
+	}
 `;
 
-const Thumbnail = styled.div`
+const Thumbnail = styled(motion.div)`
 	padding-bottom: 7rem;
 	.line{
 		height:0.3rem;
@@ -115,34 +120,6 @@ const Hide = styled.div`
 	overflow:hidden;
 `;
 
-//Frame Animation
-const Frame1 = styled(motion.div)`
-	position:fixed;
-	left:0;
-	top:9%;
-	width:100%;
-	height:100vh;
-	background:rgb(230,0,0);
-	z-index:2;
-`;
 
-const Frame2 = styled(Frame1)`
-	background:rgb(180,0,0);
-`;
-
-
-const Frame3 = styled(Frame1)`
-	background:rgb(120,0,0);
-`;
-
-
-const Frame4 = styled(Frame1)`
-	background:rgb(60,0,0);
-`;
-
-
-const Frame5 = styled(Frame1)`
-	background:rgb(30,0,0);
-`;
 
 export default Videos;

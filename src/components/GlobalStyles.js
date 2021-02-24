@@ -9,9 +9,18 @@ const GlobalStyle = createGlobalStyle`
 	box-sizing: border-box;
 }
 
+html{
+
+	@media(max-width:1700px){
+		font-size:75%;
+	}
+}
+
 body{
-	background : rgb(17,20,20);
+	background-color : rgb(17,20,20);
 	font-family:"Inter", sans-serif;
+	overflow-x:hidden;
+	
 }
 
 button{
@@ -42,9 +51,11 @@ h3{
 
 h4{
 	font-weight:bold;
-	font-size:2rem;
+	font-size:1.765rem;
 	color :rgb(230,230,230);
 }
+
+
 
 a{
 	font-size:1.1rem; 

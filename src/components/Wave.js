@@ -180,7 +180,9 @@ const WaveSvg = styled.svg`
 	left:0;
 	margin-top:15vh;
 	z-index:1;
-
+	@media(max-width:1300px){
+		opacity:0;
+	}
 `
 
 export default Wave; 

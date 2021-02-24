@@ -1,12 +1,17 @@
 import styled from "styled-components";
+import {motion} from "framer-motion";
 
-export const About = styled.div`
+export const About = styled(motion.div)`
 	min-height: 90vh;
 	display : flex;
 	align-items: center;
 	justify-content : space-between;
 	padding: 3rem 10rem;
 	color= white;
+	@media(max-width:1300px){
+		display:block;
+		padding:2rem 2rem;
+	}
 `;
 
 export const Description = styled.div`
@@ -25,9 +30,19 @@ export const Description = styled.div`
 	p{
 		padding:.5rem 0rem 5rem 0rem;
 	}
+	a{
+		color:rgb(230,230,230);
+		text-decoration : none;
+	}
+	@media(max-width:1300px){
+		padding:0;
+		button{
+			margin:0rem 0rem 5rem 0rem;
+		}
+	}
 `;
 
-export const Image = styled.div`
+export const Image = styled(motion.div)`
 	flex:.73;
 	overflow :hidden;
 	z-index:2;

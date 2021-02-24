@@ -11,6 +11,8 @@ import arrow from "../img/arrow-up-solid.svg";
 import {motion} from "framer-motion";
 import {workpageAnimation,photoAnim,fade} from "../animation";
 
+import ScrollTop from "../components/ScrollTop";
+
 const MyWork = () =>{
 	return(
 		<Work variants={workpageAnimation} initial="hidden" animate="show" exit="exit">
@@ -33,6 +35,7 @@ const MyWork = () =>{
 				<img src={arrow} alt="arrow"/>
 				</Title>
 			</Thumbnail>
+			<ScrollTop/>
 		</Work>
 		);
 };
@@ -49,11 +52,25 @@ const Work = styled(motion.div)`
 	h2{
 		padding:1rem 0rem;
 	}
-		.line {
+	.line {
 		background : rgb(213,0,0);
 		height:0.2rem;
 		margin:0rem 0rem 0rem 0rem;
 		width:23.5%;
+	}
+	@media(max-width:1600px){
+		display :flex;
+		flex-direction:column;
+		align-items:center;
+		transform:rotate(0deg);
+		margin:0rem 0rem;
+		padding:2rem;
+		.line{
+			width:70%;
+		}
+		h2{
+			font-size:250%;
+		}
 	}
 `;
 
@@ -69,6 +86,12 @@ const Thumbnail = styled.div`
 		width:55vh;
 		height:80vh;
 		object-fit:cover;
+	}
+	@media(max-width:1600px){
+		img{
+		transform:rotate(0deg);
+		padding:1rem 0rem 0rem 0rem;
+		}
 	}
 `;
 
