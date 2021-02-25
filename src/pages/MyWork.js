@@ -58,7 +58,7 @@ const Work = styled(motion.div)`
 		margin:0rem 0rem 0rem 0rem;
 		width:23.5%;
 	}
-	@media(max-width:1600px){
+	@media(max-width:1300px){
 		display :flex;
 		flex-direction:column;
 		align-items:center;
@@ -90,7 +90,7 @@ const Thumbnail = styled.div`
 	img:hover{
 		opacity:0.7;
 	}
-	@media(max-width:1600px){
+	@media(max-width:1300px){
 		img{
 		transform:rotate(0deg);
 		padding:1rem 0rem 0rem 0rem;
