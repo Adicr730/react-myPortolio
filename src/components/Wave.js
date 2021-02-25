@@ -8,7 +8,7 @@ const Wave = () => {
 	 viewBox="0 0 1280.000000 900.000000"
 	 preserveAspectRatio="xMidYMid meet">
 		<g transform="translate(0.000000,901.000000) scale(0.100000,-0.100000)"
-		fill="rgb(0,0,0,1)" stroke="none">
+		fill="rgb(30,30,30,0.7)" stroke="none">
 		<motion.path 
 		d="M12090 8969 c-1960 -288 -3568 -834 -5115 -1737 -651 -380 -1307
 		-842 -2090 -1472 -1187 -955 -1342 -1074 -1750 -1343 -878 -577 -1781 -914

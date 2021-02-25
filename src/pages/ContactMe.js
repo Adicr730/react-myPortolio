@@ -6,56 +6,122 @@ import {pageAnimation,frameContainer,frames,fade, titleAnim} from "../animation"
 
 import ScrollTop from "../components/ScrollTop";
 
+import contact from "../img/contact.jpg";
+
 const ContactMe = () =>{
 	return(
+		<Main>
 		<ContactStyle variants={pageAnimation} initial="hidden" animate="show" exit="exit">
 
+		<Form>
 		<Title>
 		<Hide>
 			<motion.h1 variants={titleAnim}>Get in touch.</motion.h1>
 		</Hide>
 		</Title>
 
+		<Hide>
+		<Social variants={fade}>
 		<div>
-		<Hide>
-		<Social variants={titleAnim}>
-			<Circle />
-			<h2>Send Me A Message</h2>
+				<div data-validate="Type first name">
+					<input id="first-name" type="text" name="first-name" placeholder="First name"/>
+					<span></span>
+				</div>
+
+				<div data-validate="Type last name">
+					<input type="text" name="last-name" placeholder="Last name"/>
+					<span ></span>
+				</div>
+
+				<div data-validate = "Valid email is required: ex@abc.xyz">
+					<input id="email"  type="text" name="email" placeholder="Email                                        eg - example@email.com"/>
+					<span></span>
+				</div>
+
+				<div>
+					<input id="phone" type="text" name="phone" placeholder="Phone Number                               eg- +91 80000 00000"/>
+					<span></span>
+				</div>
+
+				<div data-validate = "Message is required">
+					<textarea id="message" name="message" placeholder="Work Query (Description of service required)"></textarea>
+					<span></span>
+				</div>
+			</div>
 		</Social>
 		</Hide>
+
 		<Hide>
 		<Social variants={titleAnim}>
-			<Circle />
-			<h2>Send An Email</h2>
+
+				<div>
+					<button>
+						Send Message
+					</button>
+				</div>
+
+
 		</Social>
 		</Hide>
-		<Hide>
-		<Social variants={titleAnim}>
-			<Circle />
-			<h2>Social Media</h2>
-		</Social>
-		</Hide>
-		</div>
-		<ScrollTop/>
+
+			<Hide>
+			<Address variants={titleAnim}>
+
+						<span>
+							Address :  Sector Pi, Greater Noida
+						</span>
+
+						<span>
+							Lets Talk : +91-9650324174
+						</span>
+
+						<span>
+							General Support : adicr730@gmail.com
+						</span>
+					
+			</Address>
+			</Hide>
+		</Form>
+
+		<img src={contact} alt="contact img"/>
+
 		</ContactStyle>
+		</Main>
 		);
 };
+
+const Main= styled.div`
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+`;
+
 const ContactStyle = styled(motion.div)`
-	padding:1rem 10rem;
-	min-height:90vh;
-	background:rgb(230,230,230);
+	display:flex;
+	justify-content :space-between;
+	margin-left:0rem;
+	margin-top:2rem;
+	padding:0rem 0rem;
+	width:83%;
+	height:83vh;
+	background-color:rgb(50,50,50,0.35);
+	overflow :hidden;
 	@media(max-width:1500px){
-		padding:2rem;
 		font-size:1rem;
+		margin-left:1rem;
+	}
+	img{
+		width:40%;
+		height :150vh;
+		object-fit:cover;
+		opacity:0.9;
 	}
 `;
 
 const Title = styled.div`
-	margin-bottom: 4rem;
-	color:#353535;
-	@media(max-width:1300px){
-		margin-top:5rem;
-	}
+	padding:0rem;
+	color:rgb(230,230,230);
+	margin-bottom:2rem;
 `;
 
 const Hide = styled.div`
@@ -64,9 +130,10 @@ const Hide = styled.div`
 
 const Circle = styled.div`
 	border-radius:50%;
-	width:3rem;
-	height:3rem;
-	background:#353535;
+	width:1rem;
+	height:1rem;
+	background:rgb(230,230,230);
+	margin:1rem;
 `;
 
 const Social = styled(motion.div)`
@@ -75,6 +142,53 @@ const Social = styled(motion.div)`
 	h2{
 		margin:2rem;
 		color:#353535;
+	}
+`;
+
+const Address = styled(motion.div)`
+	margin-top:3rem;
+	display:flex;
+	flex-direction:column;
+	
+	span{
+		padding:0.1rem 0rem;
+		color:rgb(230,230,230);
+		font-size:140%;
+		font-weight:lighter;
+	}
+`;
+
+const Form = styled.form`
+	width:60%;
+	padding:3rem;
+	display:flex;
+	flex-direction:column;
+	justify-content :space-between;
+	input{
+		padding:1rem;
+		background:rgb(50,50,50,0.3);
+		border :none;
+		width:65vh;
+		height:3rem;
+		color:rgb(230,230,230);
+		font-size:140%;
+		margin:0.4rem 0rem;
+		outline: none;
+	}
+	textarea{
+		padding:1rem;
+		background:rgb(50,50,50,0.3);
+		border :none;
+		width:80vh;
+		height:7rem;
+		color:rgb(230,230,230);
+		font-size:140%;
+		margin:0.4rem 0rem;
+  		resize: none;
+  		outline: none;
+	}
+	button{
+		margin-top:2rem;
 	}
 `;
 

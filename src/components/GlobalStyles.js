@@ -1,5 +1,7 @@
 import {createGlobalStyle} from 'styled-components';
 
+import bg from "../img/bg.jpg";
+
 const GlobalStyle = createGlobalStyle`
 
 
@@ -17,6 +19,11 @@ html{
 }
 
 body{
+	background: url(${bg}) no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 	background-color : rgb(17,20,20);
 	font-family:"Inter", sans-serif;
 	overflow-x:hidden;

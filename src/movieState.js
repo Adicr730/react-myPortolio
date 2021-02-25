@@ -27,7 +27,6 @@ export const MovieState = () =>{
 			secondaryImg: goa1,
 			videoImg:goa2,
 			url:"/videos/goa-video",
-			Team: "Self",
 			youtube:"none",
 		},
 		{
@@ -36,8 +35,9 @@ export const MovieState = () =>{
 			secondaryImg: varanasi2,
 			videoImg:varanasi4,
 			url:"/videos/welcome-to-varanasi",
-			Team: "FMC IIT (BHU) Varanasi",
+			Team: "Video Credits : FMC IIT (BHU) Varanasi",
 			youtube:"https://youtu.be/QdrIHAtdXB0",
+			role:"Role : Director, Editior and Cinematographer",
 		},
 		{
 			title: "Sikkim - A Short Glimpse",
@@ -45,7 +45,6 @@ export const MovieState = () =>{
 			secondaryImg: sikkim1,
 			videoImg:sikkim3,
 			url:"/videos/sikkim-video",
-			Team: "Self",
 			youtube:sikkimvideo,
 		},
 		{
@@ -54,8 +53,9 @@ export const MovieState = () =>{
 			secondaryImg: null,
 			videoImg:KY2,
 			url:"/videos/KYaftermovie",
-			Team: "FMC IIT (BHU) Varanasi",
+			Team: "Video Credits : FMC IIT (BHU) Varanasi",
 			youtube:"https://youtu.be/mrLQ_TPQ6tI",
+			role:"Role : Director, Editior and Cinematographer",
 		},
 		{
 			title: "Unrest - A Short Film",
@@ -63,8 +63,9 @@ export const MovieState = () =>{
 			secondaryImg: null,
 			videoImg:unrest2,
 			url:"/videos/unrest",
-			Team: "FMC IIT (BHU) Varanasi",
+			Team: "Video Credits : FMC IIT (BHU) Varanasi",
 			youtube:"https://youtu.be/OhUDKCunqok",
+			role:"Role : Cinematographer",
 		},
 	];
 };

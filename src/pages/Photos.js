@@ -23,7 +23,7 @@ const Photos = () =>{
 const Work = styled(motion.div)`
 	min-height: 100vh;
 	overflow: hidden;
-	padding:3rem 3rem;
+	padding:2rem 3rem;
 `;
 
 

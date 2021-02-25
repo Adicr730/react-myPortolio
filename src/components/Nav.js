@@ -18,15 +18,15 @@ const Nav = () =>{
 			<ul>
 				<li>
 			    	<Link to="/">About Me</Link>
-			    	<Line transition={{duratkion:0.75}} initial={{width:"0%"}} animate={{width:pathname === "/" ? "50%" : "0%"}} />
+			    	<Line transition={{duratkion:0.75}} initial={{width:"0%"}} animate={{width:pathname === "/" ? "100%" : "0%"}} />
 				</li>
 				<li>
 			    	<Link to="/work">My Work</Link>
-			    	<Line transition={{duratkion:0.75}} initial={{width:"0%"}} animate={{width:pathname === "/work" ? "50%" : "0%"}} />
+			    	<Line transition={{duratkion:0.75}} initial={{width:"0%"}} animate={{width:pathname === "/work" ? "100%" : "0%"}} />
 				</li>
 				<li> 
 			    	<Link to="/contact">Contact Me</Link>
-			    	<Line transition={{duratkion:0.75}} initial={{width:"0%"}} animate={{width:pathname === "/contact" ? "50%" : "0%"}} />
+			    	<Line transition={{duratkion:0.75}} initial={{width:"0%"}} animate={{width:pathname === "/contact" ? "100%" : "0%"}} />
 				</li>
 			</ul>
 		</StyledNav>
@@ -37,16 +37,17 @@ const StyledNav = styled.nav`
 	position :sticky;
 	top:0;
 	z-index:100;
-	min-height:9vh;
+	min-height:7.5vh;
 	display: flex;
 	margin: auto;
 	justify-content :space-between;
 	align-items:center;
 	padding:0rem 10rem;
-	background : rgb(30,32,32);
+	background : rgb(0,0,0,0.4);
 	a{
 		color:rgb(230,230,230);
 		text-decoration : none;
+		padding:0.2rem;
 	}
 	ul{
 		display:flex;
@@ -54,8 +55,13 @@ const StyledNav = styled.nav`
 		list-style:none;
 	}
 	li{
-		padding-left:6rem;
+		margin-left:2rem;
+		padding:1rem;
 		position:relative;
+	}
+	li:hover{
+		background:rgb(250,250,250,0.08);
+		border-radius:5%;
 	}
 	@media(max-width:1300px){
 		flex-direction:column;
@@ -77,11 +83,12 @@ const Line = styled(motion.div)`
 	background:rgb(215,0,0);
 	width:0%;
 	position:absolute;
-	bottom:-80%;
-	left:53%;
+	bottom:0%;
+	left:2%;
 
 	@media(max-width:1300px)
 	{
+		bottom :-60%;
 		left:0%;
 	}
 `;

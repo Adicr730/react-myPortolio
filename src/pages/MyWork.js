@@ -41,7 +41,7 @@ const MyWork = () =>{
 };
 
 const Work = styled(motion.div)`
-	margin:20rem -2rem;
+	margin:17.5rem -2rem;
 	width:100%;
 	display :flex;
 	flex-direction:column;
@@ -86,6 +86,9 @@ const Thumbnail = styled.div`
 		width:55vh;
 		height:80vh;
 		object-fit:cover;
+	}
+	img:hover{
+		opacity:0.7;
 	}
 	@media(max-width:1600px){
 		img{

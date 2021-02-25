@@ -44,6 +44,7 @@ export const Description = styled.div`
 
 export const Image = styled(motion.div)`
 	flex:.73;
+	opacity:0.8;
 	overflow :hidden;
 	z-index:2;
 	img{
