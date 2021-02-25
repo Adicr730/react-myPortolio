@@ -6,6 +6,7 @@ export const workpageAnimation={
 		opacity :1,
 		transition:{
 			duration:0.5,
+			delay:0.5,
 			ease:"easeOut",
 			when:"beforeChildren",
 			staggerChildren:0.25,
@@ -51,6 +52,7 @@ export const pageAnimation={
 		opacity :1,
 		y:1,
 		transition:{
+			delay:0.3,
 			duration:0.35,
 			ease:"easeOut",
 			when: "beforeChildren",
