@@ -55,7 +55,7 @@ const ContactMe = () =>{
 		<Social variants={titleAnim}>
 
 				<div>
-					<button>
+					<button type="submit">
 						Send Message
 					</button>
 				</div>
