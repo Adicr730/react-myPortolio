@@ -13,7 +13,7 @@ const ContactMe = () =>{
 		<Main>
 		<ContactStyle variants={pageAnimation} initial="hidden" animate="show" exit="exit">
 
-		<Form>
+		<Form name="contact" method="POST" data-netlify="true">
 		<Title>
 		<Hide>
 			<motion.h1 variants={titleAnim}>Get in touch.</motion.h1>
@@ -78,7 +78,6 @@ const ContactMe = () =>{
 						<span>
 							General Support : adicr730@gmail.com
 						</span>
-					
 			</Address>
 			</Hide>
 		</Form>
