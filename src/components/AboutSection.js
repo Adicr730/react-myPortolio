@@ -5,8 +5,10 @@ import click from "../img/camera-solid.svg";
 import code from "../img/code-solid.svg";
 import bg from "../img/bg.jpg";
 import Wave from "./Wave";
+import insta from "../img/instagram.svg";
+import yout from "../img/youtube.svg";
 //Styled
-import {About, Description,Image,Hide} from "../styles"
+import {About, Description,Image,Hide,Social} from "../styles"
 //Framer Motion
 import {motion} from "framer-motion";
 import {titleAnim , fade ,photoAnim} from "../animation";
@@ -40,6 +42,10 @@ const AboutSection = () => {
 			<Image>
 				<motion.img variants={photoAnim} src={dp} alt="my picture" />
 			</Image>
+			<Social variants={fade}>
+			<img src={yout} alt="youtube"/>
+			<a href="https://www.instagram.com/adicr7_05"><img src={insta} alt="insta"/></a>
+			</Social>
 			<Wave/>
 		</About>
 		);

@@ -7,6 +7,8 @@ import {pageAnimation,frameContainer,frames,fade, titleAnim} from "../animation"
 import ScrollTop from "../components/ScrollTop";
 
 import contact from "../img/contact.jpg";
+import insta from "../img/instagram.svg";
+import yout from "../img/youtube.svg";
 
 const ContactMe = () =>{
 	return(
@@ -80,6 +82,10 @@ const ContactMe = () =>{
 						</span>
 			</Address>
 			</Hide>
+		<Socialmedia variants={fade}>
+			<img src={yout} alt="youtube"/>
+			<a href="https://www.instagram.com/adicr7_05"><img src={insta} alt="insta"/></a>
+		</Socialmedia>
 		</Form>
 
 		<img src={contact} alt="contact img"/>
@@ -163,6 +169,7 @@ const Form = styled.form`
 	display:flex;
 	flex-direction:column;
 	justify-content :space-between;
+	position:relative;
 	input{
 		padding:1rem;
 		background:rgb(50,50,50,0.3);
@@ -191,5 +198,24 @@ const Form = styled.form`
 	}
 `;
 
+const Socialmedia =styled(motion.div)`
+	display :flex;
+	align-items:center;
+	z-index:3;
+	width:15rem;
+	padding:0.1rem 0rem;
+	position :absolute;
+	left:82%;
+	top:5%;
+	img{
+		padding: 0.8rem;
+		max-height:4rem;
+		filter:invert(0.9);
+		margin:0rem 0.5rem;
+	}
+	a{
+		padding:0;
+	}
+`;
 
 export default ContactMe;

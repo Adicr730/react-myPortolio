@@ -47,6 +47,7 @@ export const Image = styled(motion.div)`
 	opacity:0.8;
 	overflow :hidden;
 	z-index:2;
+	position:relative;
 	img{
 		width:100%;
 		height :80vh;
@@ -78,5 +79,22 @@ export const Hide =styled.div`
 	}
 	span{
 		font-weight:normal;
+	}
+`;
+
+export const Social =styled(motion.div)`
+	overflow :hidden;
+	display :flex;
+	align-items:center;
+	z-index:3;
+	width:13rem;
+	padding:0.1rem 0rem;
+	position :absolute;
+	left:84.2%;
+	top:28.6%;
+	img{
+		max-height:2.4rem;
+		filter:invert(0.9);
+		margin:0.5rem;
 	}
 `;
