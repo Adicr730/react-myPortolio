@@ -15,7 +15,7 @@ const ContactMe = () =>{
 		<Main>
 		<ContactStyle variants={pageAnimation} initial="hidden" animate="show" exit="exit">
 
-		<Form name="contact" method="POST" data-netlify="true">
+		<Form name="contact" netlify>
 		<Title>
 		<Hide>
 			<motion.h1 variants={titleAnim}>Get in touch.</motion.h1>
