@@ -15,7 +15,7 @@ const ContactMe = () =>{
 		<Main>
 		<ContactStyle variants={pageAnimation} initial="hidden" animate="show" exit="exit">
 
-		<Form name="contact" netlify>
+		<Form>
 		<Title>
 		<Hide>
 			<motion.h1 variants={titleAnim}>Get in touch.</motion.h1>
@@ -24,45 +24,23 @@ const ContactMe = () =>{
 
 		<Hide>
 		<Social variants={fade}>
-		<div>
-				<div data-validate="Type first name">
+		<form name="contact" method="POST" data-netlify="true">
+				
 					<input id="first-name" type="text" name="first-name" placeholder="First name"/>
-					<span></span>
-				</div>
 
-				<div data-validate="Type last name">
 					<input type="text" name="last-name" placeholder="Last name"/>
-					<span ></span>
-				</div>
 
-				<div data-validate = "Valid email is required: ex@abc.xyz">
 					<input id="email"  type="text" name="email" placeholder="Email                                        eg - example@email.com"/>
-					<span></span>
-				</div>
-
-				<div>
+	
 					<input id="phone" type="text" name="phone" placeholder="Phone Number                               eg- +91 80000 00000"/>
-					<span></span>
-				</div>
 
-				<div data-validate = "Message is required">
 					<textarea id="message" name="message" placeholder="Work Query (Description of service required)"></textarea>
-					<span></span>
-				</div>
-			</div>
-		</Social>
-		</Hide>
 
-		<Hide>
-		<Social variants={titleAnim}>
-
-				<div>
 					<button type="submit">
 						Send Message
 					</button>
-				</div>
 
-
+			</form>
 		</Social>
 		</Hide>
 
@@ -163,7 +141,7 @@ const Address = styled(motion.div)`
 	}
 `;
 
-const Form = styled.form`
+const Form = styled.div`
 	width:60%;
 	padding:3rem;
 	display:flex;
