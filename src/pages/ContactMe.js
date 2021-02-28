@@ -24,7 +24,7 @@ const ContactMe = () =>{
 
 		<Hide>
 		<Social variants={fade}>
-		<form name="contact" method="POST" data-netlify="true">
+		<form name="contact" netlify>
 				
 					<input id="first-name" type="text" name="first-name" placeholder="First name"/>
 
