@@ -6,24 +6,24 @@ import {Link} from "react-router-dom";
 //Images
 import VideoThumbnail from "../img/sikkim pano.jpg"
 import Photo from "../img/sikkim.jpg"
-import unrest from "../img/unrest.JPG";
-import unrest2 from "../img/video/unrest2.JPG"
-import KY from "../img/KY.JPG";
-import KY2 from "../img/video/KY2.JPG";
-import goa1 from "../img/video/goa1.jpeg";
+import unrest from "../img/unrest.jpg";
+import unrest2 from "../img/video/unrest2.jpg"
+import KY from "../img/KY.jpg";
+import KY2 from "../img/video/KY2.jpg";
+import goa1 from "../img/video/goa1.jpg";
 import goa2 from "../img/video/goa2.jpg";
-import goamain from "../img/video/goamain.JPG";
+import goamain from "../img/video/goamain.jpg";
 import Sikkim from "../img/sikkim pano.jpg";
 import sikkim1 from "../img/video/sikkim1.jpg";
 import sikkim2 from "../img/video/sikkim2.jpg";
-import sikkim3 from "../img/video/sikkim3.jpeg";
-import sikkimmain from "../img/video/sikkimmain.jpeg";
-import varanasi1 from "../img/video/varanasi1.jpeg";
+import sikkim3 from "../img/video/sikkim3.jpg";
+import sikkimmain from "../img/video/sikkimmain.jpg";
+import varanasi1 from "../img/video/varanasi1.jpg";
 import varanasi2 from "../img/video/varanasi2.jpg";
-import varanasi3 from "../img/video/varanasi3.jpeg";
-import varanasi4 from "../img/video/varanasi4.jpeg";
-import varanasi5 from "../img/video/varanasi5.jpeg";
-import varanasimain from "../img/video/varanasimain.jpeg";
+import varanasi3 from "../img/video/varanasi3.jpg";
+import varanasi4 from "../img/video/varanasi4.jpg";
+import varanasi5 from "../img/video/varanasi5.jpg";
+import varanasimain from "../img/video/varanasimain.jpg";
 //Animations
 import {motion} from "framer-motion";
 import {workpageAnimation , fade , photoAnim, lineAnim ,frames, frameContainer} from "../animation";

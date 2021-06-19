@@ -34,7 +34,7 @@ const AboutSection = () => {
 					</Hide>
 					<div className="line"></div>
 					<motion.p variants={fade}>
-						{"<h3> " + "Aspiring FilmMaker / Photographer who can Kick some Balls and Code. ( Yes i made this website myself ) "+ "</h3>"}
+						{"<description> " + "Aspiring FilmMaker / Photographer who can Kick some Balls and Code. ( Yes i made this website myself ) "+ "</description>"}
 					</motion.p>
 					<motion.button variants={fade}><Link to="/contact">Contact Me</Link></motion.button>
 				</div>

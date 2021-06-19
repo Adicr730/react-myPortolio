@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 import {Link} from "react-router-dom";
 //Images
-import VideoThumbnail from "../img/video/varanasimain.jpeg";
-import Photo from "../img/video/varanasi1.jpeg";
+import VideoThumbnail from "../img/video/varanasimain.jpg";
+import Photo from "../img/video/varanasi1.jpg";
 import arrow from "../img/arrow-up-solid.svg";
 //Animations
 import {motion} from "framer-motion";
