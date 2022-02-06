@@ -52,7 +52,7 @@ const ContactMe = () =>{
 						</span>
 
 						<span>
-							Lets Talk : +91-9650324174
+							Lets Talk : +91-7678207504
 						</span>
 
 						<span>
@@ -129,7 +129,7 @@ const Social = styled(motion.div)`
 `;
 
 const Address = styled(motion.div)`
-	margin-top:3rem;
+	margin-top:2rem;
 	display:flex;
 	flex-direction:column;
 	
